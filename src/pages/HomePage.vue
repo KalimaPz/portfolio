@@ -1,7 +1,8 @@
 <template>
   <div>
     <LandingSection />
-    <SkillSection />
+    <SkillSection title="ss"/>
+    
   </div>
 </template>
 
@@ -10,9 +11,12 @@ import LandingSection from "./HomePage/LandingSection.vue";
 import SkillSection from "./HomePage/SkillSection.vue";
 export default {
   name: "HomePage",
-  components: { LandingSection, SkillSection },
+  components: { LandingSection, 
+  
+  SkillSection 
+  
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

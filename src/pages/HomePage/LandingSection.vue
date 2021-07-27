@@ -53,24 +53,26 @@ export default {
 #tel,
 #email,
 #place {
-  font-size: 16px;
+  font-size: 1.5vw;
   font-weight: 600;
 }
 
 #position,
 #work-place {
-  padding-bottom: 5px;
+  padding-bottom: 1.75vw;
   font-weight: 600;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 2.5vw;
+  
 }
 h2 {
-  font-size: 24px;
+  font-size: 1.75vw;
 }
 #avatar {
-  width: 20vmax;
+  width: 25vmax;
+  min-width: 10vmax;
   border-radius: 50%;
   border-style: solid;
   border-color: #5dcbb0;
@@ -118,7 +120,6 @@ h2 {
 .nav-item {
   display: flex;
   align-items: center;
-
   justify-content: center;
   min-width: 145px;
   min-height: 50px;
@@ -127,12 +128,13 @@ h2 {
   margin: 5px;
   color: white;
   transition: 0.75s;
+  text-shadow: 2px 1px 10px #00000010;
 }
 
 .nav-item:hover {
-  color: #5dcbb0;
-  background-color: white;
-  border-radius: 15px 0px 15px 0px;
+  color: white;
+  background-color: #32C732;
+  border-radius: 30px 0px 30px 0px;
 }
 
 #content-section {
