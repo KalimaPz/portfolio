@@ -1,20 +1,22 @@
 <template>
   <div>
     <LandingSection />
-    <SkillSection title="ss"/>
-    
+    <SkillSection />
+    <ExperienceSection/>
   </div>
 </template>
 
 <script>
 import LandingSection from "./HomePage/LandingSection.vue";
 import SkillSection from "./HomePage/SkillSection.vue";
+import ExperienceSection from './HomePage/ExperienceSection.vue'
 export default {
   name: "HomePage",
-  components: { LandingSection, 
-  
-  SkillSection 
-  
+  components: {
+    LandingSection,
+
+    SkillSection,
+    ExperienceSection,
   },
 };
 </script>

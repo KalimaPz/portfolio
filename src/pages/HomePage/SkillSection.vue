@@ -2,26 +2,10 @@
   <div class="skill-section">
     <div class="section-topic"><h2>Skills</h2></div>
     <div class="card-area">
-      <SkillCard
-        image="backend.png"
-        title="Web Development"
-        details="details lorem ipsum"
-      />
-      <SkillCard
-        image="user-interface.png"
-        title="Mobile App Development"
-        details="details lorem ipsum"
-      />
-      <SkillCard
-        image="agile.png"
-        title="SCRUM Working"
-        details="details lorem ipsum"
-      />
-      <SkillCard
-        image="internet-of-things.png"
-        title="Internet of Things"
-        details="details lorem ipsum"
-      />
+      <SkillCard image="programming.png" title="Web Development" />
+      <SkillCard image="user-interface.png" title="Mobile App Development" />
+      <SkillCard image="agile.png" title="SCRUM Working" />
+      <SkillCard image="internet-of-things.png" title="Internet of Things" />
     </div>
     <div class="section-topic"><h2>Programing Skills</h2></div>
     <div>
@@ -208,9 +192,8 @@ export default {
 <style scoped>
 .skill-section {
   height: 100vh;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 1%;
+  width: 100vw;
+  padding: 2.5%;
   /* background-color: aqua; */
 }
 .card-area {

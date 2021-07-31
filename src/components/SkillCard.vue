@@ -21,6 +21,7 @@ export default {
   justify-content: center;
   width: fit-content;
   min-height: 25vh;
+  max-height: 25vh;
   min-width: 20vw;
   padding: 20px;
   margin-bottom: 10px;
@@ -29,9 +30,17 @@ export default {
 }
 
 .main:hover {
-  background-color: rgb(0, 130, 170);
+  background-color: rgb(0, 77, 179);
   color: white;
+  font-weight: bold;
+  font-size: 24px;
+  /* width: 64px; */
 }
+
+.main:hover .icon {
+  width: 90px;
+}
+
 #title {
   font-weight: 600;
   font-size: 18px;
@@ -39,5 +48,6 @@ export default {
 }
 .icon {
   width: 64px;
+  transition: 0.5s;
 }
 </style>
