@@ -3,6 +3,7 @@
     <LandingSection />
     <SkillSection />
     <ExperienceSection/>
+    <PortfolioSection/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import LandingSection from "./HomePage/LandingSection.vue";
 import SkillSection from "./HomePage/SkillSection.vue";
 import ExperienceSection from './HomePage/ExperienceSection.vue'
+import PortfolioSection from "./HomePage/PorfolioSection.vue"
 export default {
   name: "HomePage",
   components: {
@@ -17,6 +19,7 @@ export default {
 
     SkillSection,
     ExperienceSection,
+    PortfolioSection
   },
 };
 </script>

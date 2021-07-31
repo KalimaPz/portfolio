@@ -23,13 +23,11 @@ export default {
 <style scoped>
 .card-detail {
   flex: 2;
-  
 }
 .card-icon {
   flex: 1;
   text-align: center;
   align-self: center;
-  
 }
 .icon {
   width: 64px;
@@ -60,8 +58,8 @@ export default {
   background-color: rgba(255, 255, 255, 0.4);
   /* backdrop-filter: blur(10px); */
   /* box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3); */
-  max-width: 40vw;
-  min-width: 35vw;
+  max-width: 45vw;
+  min-width: 40vw;
   max-height: 35vh;
   min-height: 30vh;
   margin-bottom: 1.5vh;
@@ -73,7 +71,6 @@ export default {
 .card:hover {
   background-color: rgb(0, 77, 179);
   color: white;
-  
 }
 .card:hover .icon {
   width: 96px;

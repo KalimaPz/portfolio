@@ -20,5 +20,6 @@ export default {
   font-family: 'Nunito', sans-serif;
   padding: 0;
   margin: 0;
+  letter-spacing: 1.35px;
 }
 </style>

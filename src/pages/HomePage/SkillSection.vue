@@ -199,7 +199,7 @@ export default {
 .card-area {
   /* width: 50%; */
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   text-align: center;
 }
