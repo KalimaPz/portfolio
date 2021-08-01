@@ -16,7 +16,6 @@ export default {
   name: "HomePage",
   components: {
     LandingSection,
-
     SkillSection,
     ExperienceSection,
     PortfolioSection

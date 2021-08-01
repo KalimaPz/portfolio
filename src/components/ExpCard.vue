@@ -4,11 +4,11 @@
       <img class="icon" :src="require(`@/assets/icons/${image}`)" />
     </div>
     <div class="card-detail">
-      <p id="title">{{ title }}</p>
-      <p id="subtitle">{{ subtitle }}</p>
-      <p id="subtitle2">{{ subtitle2 }}</p>
-      <p id="period">{{ period }}</p>
-      <p id="detail">{{ detail }}</p>
+      <div id="title">{{ title }}</div>
+      <div id="subtitle">{{ subtitle }}</div>
+      <div id="subtitle2">{{ subtitle2 }}</div>
+      <div id="period">{{ period }}</div>
+      <div id="detail">{{ detail }}</div>
     </div>
   </div>
 </template>
@@ -21,61 +21,103 @@ export default {
 </script>
 
 <style scoped>
-.card-detail {
-  flex: 2;
-}
-.card-icon {
-  flex: 1;
-  text-align: center;
-  align-self: center;
-}
-.icon {
-  width: 64px;
-  transition: 0.5s;
-}
-#title {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
+@media only screen and (min-width: 768px) {
+  /*desktop*/
+  .card {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.4);
+    max-width: 45vw;
+    min-width: 40vw;
+    max-height: 35vh;
+    min-height: 30vh;
+    margin-bottom: 1.5vh;
+    padding: 4.5%;
+    transition: 0.5s;
+    align-items: center;
+  }
 
-#subtitle,
-#subtitle2 {
-  font-size: 1rem;
-  font-weight: 600;
-}
+  .icon {
+    width: 64px;
+    transition: 0.5s;
+  }
+  .card-icon {
+    flex: 1;
+  }
+  .card-detail {
+    flex: 2;
+  }
+  .card:hover {
+    background-color: rgb(0, 77, 179);
+    color: white;
+  }
+  .card:hover .icon {
+    width: 96px;
+  }
+  #title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 
-#period {
-  font-size: 1rem;
-  font-weight: 300;
-}
-#detail {
-  font-size: 1rem;
-  font-weight: 300;
-}
-.card {
-  display: flex;
-  flex-direction: row;
-  background-color: rgba(255, 255, 255, 0.4);
-  /* backdrop-filter: blur(10px); */
-  /* box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3); */
-  max-width: 45vw;
-  min-width: 40vw;
-  max-height: 35vh;
-  min-height: 30vh;
-  margin-bottom: 1.5vh;
-  padding: 4.5%;
-  transition: 0.5s;
+  #subtitle,
+  #subtitle2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
 
-  /* border-radius: 10px; */
+  #period {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  #detail {
+    font-size: 1rem;
+    font-weight: 300;
+  }
 }
-.card:hover {
-  background-color: rgb(0, 77, 179);
-  color: white;
-}
-.card:hover .icon {
-  width: 96px;
-}
-p {
-  font-size: 1rem;
+@media only screen and (max-width: 768px) {
+  /*mobile*/
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.4);
+
+    width: 90vw;
+    max-height: 30vh;
+    min-height: 20vh;
+    padding: 3.5%;
+    margin: 1.5vh;
+    align-items: center;
+  }
+  .card-detail {
+    flex: 3;
+  }
+  .icon {
+    width: 32px;
+  }
+  .card-icon {
+    flex: 1;
+    text-align: center;
+    align-self: center;
+  }
+  #title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  #subtitle,
+  #subtitle2 {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  #period {
+    font-size: 0.5rem;
+    font-weight: 300;
+  }
+  #detail {
+    font-size: 0.5rem;
+    font-weight: 300;
+  }
 }
 </style>

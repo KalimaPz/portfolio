@@ -13,6 +13,11 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (min-width: 768px) {
+  .image:hover {
+    transform: scale(1.25);
+  }
+}
 .container {
   /* background-color: red; */
   text-align: center;
@@ -23,9 +28,6 @@ export default {
   width: 200px;
   /* height: 400px; */
   transition: transform 0.5s;
-}
-.image:hover {
-  transform: scale(1.25);
 }
 
 #description {

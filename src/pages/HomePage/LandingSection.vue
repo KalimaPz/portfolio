@@ -1,34 +1,37 @@
 <template>
   <div class="landing-page">
-    <div id="navigator">
-      <p class="nav-item">About</p>
-      <p class="nav-item">Skills</p>
-      <p class="nav-item">Experience</p>
-      <p class="nav-item">Portfolio</p>
-      <p class="nav-item">Repositories</p>
-      <p class="nav-item">Contact</p>
-    </div>
+    <a-menu class="navigator" mode="horizontal" theme="dark">
+      <a-menu-item class="nav-item">About</a-menu-item>
+      <a-menu-item class="nav-item">Skills</a-menu-item>
+      <a-menu-item class="nav-item">Experiences</a-menu-item>
+      <a-menu-item class="nav-item">Portfolio</a-menu-item>
+    </a-menu>
+
     <div id="content-section">
       <div class="my-info">
-        <div id="greeting">Hello, My name is</div>
-        <h1 class="info-item" id="name">Donnukrit Satirakul</h1>
-        <h2 class="info-item" id="position">Front End / Mobile Developer</h2>
-        <h3 class="info-item" id="work-place">Alicorn Tech Co. Ltd.</h3>
-        <div class="info-item">
-          <pin-icon class="icon" />
-          <p class="info-text" id="place">Phuket, Thailand</p>
+        <div class="profile-image">
+          <img :src="avatarUrl" id="avatar" />
         </div>
-        <div class="info-item">
-          <phone-icon class="icon" />
-          <p class="info-text" id="tel">+66 910533948</p>
+
+        <div id="info-area">
+          <div id="name">Donnukrit Satirakul</div>
+          <div id="position">Front End / Mobile Developer</div>
+
+          <div id="contact">
+            <div class="info-item">
+              <pin-icon class="icon" />
+              Muang Phuket, Phuket, Thailand
+            </div>
+            <div class="info-item">
+              <phone-icon class="icon" />
+              +66 910533948
+            </div>
+            <div class="info-item">
+              <email-icon class="icon" />
+              donnukrit@weserve.co.th
+            </div>
+          </div>
         </div>
-        <div class="info-item">
-          <email-icon class="icon" />
-          <p class="info-text" id="email">donnukrit@weserve.co.th</p>
-        </div>
-      </div>
-      <div class="profile-image">
-        <img :src="avatarUrl" id="avatar" />
       </div>
     </div>
   </div>
@@ -39,140 +42,143 @@ export default {
   name: "LandingSection",
   data: () => {
     return {
-      avatarUrl:
-        "https://scontent.fbkk5-4.fna.fbcdn.net/v/t1.6435-9/170615322_4069305883090622_5280854000416563373_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=JpJi1h56tyoAX_FgYYH&_nc_ht=scontent.fbkk5-4.fna&oh=05f17ad484b595a86be3508383816204&oe=60FEAECD",
+      avatarUrl: "https://avatars.githubusercontent.com/u/23716821?v=4",
     };
   },
 };
 </script>
 
 <style scoped>
-#name {
-  font-weight: bold;
-}
-#tel,
-#email,
-#place {
-  font-size: 1.5vw;
-  font-weight: 600;
+@media only screen and (max-width: 768px) {
+  #info-area {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0px;
+    /* background-color: red; */
+    /* text-align: center; */
+  }
+
+  #contact {
+    width: fit-content;
+    padding: 1vw 0vw;
+    font-size: 0.8rem;
+    font-weight: 300;
+
+    /* background-color: aqua; */
+  }
+  .landing-page {
+    height: 100vh;
+  }
+  .navigator {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 5vh 10vw;
+
+    /* background-color: aqua; */
+  }
+  .my-info {
+    /* background-color: aqua; */
+    text-align: center;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+  }
+
+  #avatar {
+    max-width: 256px;
+    max-height: 256px;
+    width: 40vw;
+    border-radius: 100%;
+  }
+
+  #name {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  #position {
+    font-size: 1rem;
+    font-weight: 600;
+  }
 }
 
-#position,
-#work-place {
-  padding-bottom: 1.75vw;
-  font-weight: 600;
-}
+@media only screen and (min-width: 768px) {
+  .navigator {
+    display: flex;
+    flex-direction: row;
+  }
+  .landing-page {
+    height: 100vh;
+  }
 
-h1 {
-  font-size: 2.5vw;
-  
-}
-h2 {
-  font-size: 1.75vw;
-}
-#avatar {
-  width: 25vmax;
-  min-width: 10vmax;
-  border-radius: 50%;
-  border-style: solid;
-  border-color: #5dcbb0;
-  border-width: 15px;
+  #content-section {
+    display: flex;
+    height: 100%;
 
-  box-shadow: 5px 10px #5252524f; /*, 10px 15px #9C9C9C */
-}
-#greeting {
-    
-  width: fit-content;
-  background-color: #5dcbb0;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 40px;
-  padding-left: 40px;
-  border-radius: 20px 30px 30px 0px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  font-size: 16px;
-}
-.landing-page {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background-color: #211f26;
-}
-#navigator {
-  width: 100vw;
-  height: 60px;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+    padding: 5vh 10vw;
+    /* background-color: aqua; */
+  }
+  .info-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .my-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #avatar {
+    max-width: 256px;
+    max-height: 256px;
+    width: 50vw;
+    border-radius: 100%;
+  }
+  .profile-image {
+    flex: 2;
+  }
+  #info-area {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  padding-top: 60px;
-  /* background-color: steelblue; */
-  /* opacity: 0.1; */
-}
-.nav-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 145px;
-  min-height: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 5px;
-  color: white;
-  transition: 0.75s;
-  text-shadow: 2px 1px 10px #00000010;
-}
+  #name {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 
-.nav-item:hover {
-  color: white;
-  background-color: #32C732;
-  border-radius: 30px 0px 30px 0px;
-}
+  #position {
+    font-size: 1rem;
+    font-weight: 600;
+  }
 
-#content-section {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  /* background-color: cornflowerblue; */
-  padding-left: 20%;
-  padding-right: 20%;
-}
-
-.my-info {
-  flex: 2;
-  height: fit-content;
-  width: fit-content;
-  color: white;
-  letter-spacing: 0.2ch;
-  /* padding-left: 20%; */
-  /* background-color: red; */
-}
-
-.info-item {
-  display: flex;
-  color: white;
-  /* padding-top: 5px; */
-  /* padding-bottom: 5px; */
-}
-.profile-image {
-  flex: 2;
-  text-align: center;
-  /* background-color: cadetblue; */
-}
-
-.info-text {
-  padding-left: 10px;
+  #contact {
+    padding: 1vw 0vw;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .icon {
-  color: #5dcbb0;
+  margin-right: 10px;
 }
 </style>

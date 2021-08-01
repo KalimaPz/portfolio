@@ -16,6 +16,15 @@ export default {
 </script>
 
 <style scoped>
+
+@media only screen and (min-width: 768px) {
+  .container:hover {
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .zoom:hover {
+    transform: scale(2);
+  }
+}
 .container {
   padding-top: 2.5%;
   padding-bottom: 2.5%;
@@ -26,9 +35,7 @@ export default {
 
   margin: 10px;
 }
-.container:hover {
-  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
-}
+
 #photo {
   width: 400px;
   text-align: center;
@@ -47,8 +54,5 @@ export default {
 
   height: 200px;
   margin: 0 auto;
-}
-.zoom:hover {
-  transform: scale(2);
 }
 </style>

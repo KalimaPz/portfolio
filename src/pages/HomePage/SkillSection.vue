@@ -1,13 +1,15 @@
 <template>
   <div class="skill-section">
-    <div class="section-topic"><h2>Skills</h2></div>
-    <div class="card-area">
-      <SkillCard image="programming.png" title="Web Development" />
-      <SkillCard image="user-interface.png" title="Mobile App Development" />
-      <SkillCard image="agile.png" title="SCRUM Working" />
-      <SkillCard image="internet-of-things.png" title="Internet of Things" />
+    <div class="section-topic">Skills</div>
+    <div id="center-skill">
+      <div class="card-area">
+        <SkillCard image="programming.png" title="Web Development" />
+        <SkillCard image="user-interface.png" title="Mobile App Development" />
+        <SkillCard image="agile.png" title="SCRUM" />
+        <SkillCard image="internet-of-things.png" title="Internet of Things" />
+      </div>
     </div>
-    <div class="section-topic"><h2>Programing Skills</h2></div>
+    <div class="section-topic">Programing Skills</div>
     <div>
       <div id="chart-area" ref="chartdiv"></div>
     </div>
@@ -190,27 +192,54 @@ export default {
 };
 </script>
 <style scoped>
+@media only screen and (max-width: 768px) {
+  /* Mobile */
+  .card-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+  #chart-area {
+    /* background-color: aliceblue; */
+    min-height: 50vh;
+    /* height: 500px; */
+  }
+
+  .section-topic {
+    padding : 1.25rem 0px;
+    font-size: 1.25rem;
+    
+    font-weight: bold;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* Desktop */
+  .card-area {
+    /* width: 50%; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  #chart-area {
+    /* background-color: aliceblue; */
+    min-height: 50vh;
+    /* height: 500px; */
+  }
+  .section-topic {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding : 1.25rem 0px;
+  }
+}
+
 .skill-section {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   padding: 2.5%;
   /* background-color: aqua; */
-}
-.card-area {
-  /* width: 50%; */
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.section-topic {
-  font-size: 1.5vw;
-}
-
-#chart-area {
-  /* background-color: aliceblue; */
-  min-height: 50vh;
-  /* height: 500px; */
 }
 </style>

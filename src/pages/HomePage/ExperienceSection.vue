@@ -1,7 +1,7 @@
 <template>
   <div class="experience-section">
     <div id="education-section">
-      <h1 id="education">Education</h1>
+      <div id="education">Education</div>
       <ExpCard
         title="Prince of Songkhla University"
         subtitle2="Kathu Phuket, Thailand"
@@ -18,7 +18,7 @@
       />
     </div>
     <div id="working-section">
-      <h1 id="working">Working Experience</h1>
+      <div id="working">Working Experience</div>
       <ExpCard
         title="Mobile Application Developer"
         subtitle="Alicorn Tech Co. Ltd"
@@ -57,23 +57,48 @@ export default {
 </script>
 
 <style scoped>
-.experience-section {
-  padding: 3.5%;
-  background-color: aliceblue;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  
-  
+@media only screen and (min-width: 769px) {
+  /*desktop*/
+  .experience-section {
+    background-color: aliceblue;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #education {
+    padding: 1.25rem 0px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  #working {
+    padding: 1.5rem 0px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }
-#education {
+@media only screen and (max-width: 768px) {
+  /* mobile */
+  .experience-section {
+    background-color: aliceblue;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  #education {
+  padding: 1.25rem 0px;
   text-align: center;
-  padding-bottom: 1.5vw;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 #working {
+  padding: 1.25rem 0px;
   text-align: center;
-  padding-bottom: 1.5vw;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 }
 
 #education-section {
