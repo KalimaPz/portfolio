@@ -1,28 +1,53 @@
 <template>
   <div class="skill-section">
-    <div class="section-topic">Skills</div>
+    <div class="section-topic" data-aos="fade-up"
+          data-aos-duration="1000">Skills</div>
     <div id="center-skill">
       <div class="card-area">
-        <SkillCard image="programming.png" title="Web Development" />
-        <SkillCard image="user-interface.png" title="Mobile App Development" />
-        <SkillCard image="agile.png" title="SCRUM" />
-        <SkillCard image="internet-of-things.png" title="Internet of Things" />
+        <SkillCard
+          image="programming.png"
+          title="Web Development"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        />
+        <SkillCard
+          image="user-interface.png"
+          title="Mobile App Development"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        />
+        <SkillCard
+          image="agile.png"
+          title="SCRUM"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        />
+        <SkillCard
+          image="internet-of-things.png"
+          title="Internet of Things"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        />
       </div>
     </div>
-    <div class="section-topic">Programing Skills</div>
+    <div class="section-topic" data-aos="fade-up"
+          data-aos-duration="1000" >Programing Skills</div>
     <div>
-      <div id="chart-area" ref="chartdiv"></div>
+      <div id="chart-area" ref="chartdiv" data-aos="fade-up"
+          data-aos-duration="1000"></div>
     </div>
   </div>
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
 import SkillCard from "../../components/SkillCard.vue";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4plugins_forceDirected from "@amcharts/amcharts4/plugins/forceDirected";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 am4core.useTheme(am4themes_animated);
-
+AOS.init();
 export default {
   name: "SkillSection",
   components: { SkillCard },
@@ -208,9 +233,9 @@ export default {
   }
 
   .section-topic {
-    padding : 1.25rem 0px;
+    padding: 1.25rem 0px;
     font-size: 1.25rem;
-    
+
     font-weight: bold;
   }
 }
@@ -232,7 +257,7 @@ export default {
   .section-topic {
     font-size: 1.5rem;
     font-weight: bold;
-    padding : 1.25rem 0px;
+    padding: 1.25rem 0px;
   }
 }
 

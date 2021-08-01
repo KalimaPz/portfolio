@@ -21,9 +21,9 @@ export default {
   .container:hover {
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
   }
-  .zoom:hover {
+  /* .zoom:hover {
     transform: scale(2);
-  }
+  } */
 }
 .container {
   padding-top: 2.5%;

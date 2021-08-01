@@ -3,22 +3,24 @@
     <LandingSection />
     <SkillSection />
     <ExperienceSection/>
-    <PortfolioSection/>
+    <PortfolioSection />
   </div>
 </template>
 
 <script>
+
 import LandingSection from "./HomePage/LandingSection.vue";
 import SkillSection from "./HomePage/SkillSection.vue";
-import ExperienceSection from './HomePage/ExperienceSection.vue'
-import PortfolioSection from "./HomePage/PorfolioSection.vue"
+import ExperienceSection from "./HomePage/ExperienceSection.vue";
+import PortfolioSection from "./HomePage/PorfolioSection.vue";
+
 export default {
   name: "HomePage",
   components: {
     LandingSection,
     SkillSection,
     ExperienceSection,
-    PortfolioSection
+    PortfolioSection,
   },
 };
 </script>

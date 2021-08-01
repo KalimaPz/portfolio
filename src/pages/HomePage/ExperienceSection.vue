@@ -1,13 +1,17 @@
 <template>
   <div class="experience-section">
     <div id="education-section">
-      <div id="education">Education</div>
+      <div id="education" data-aos="fade-up" data-aos-duration="1000">
+        Education
+      </div>
       <ExpCard
         title="Prince of Songkhla University"
         subtitle2="Kathu Phuket, Thailand"
         period="2016 - 2020"
         detail="Bachelor of Computer Engineering"
         image="bachelors-degree.png"
+        data-aos="fade-right"
+        data-aos-duration="1000"
       />
       <ExpCard
         title="Pakphanang School"
@@ -15,10 +19,13 @@
         period="2010 - 2016"
         detail="High School, Sci-Math Program"
         image="school.png"
+        data-aos="fade-right"
+        data-aos-duration="1000"
       />
     </div>
     <div id="working-section">
-      <div id="working">Working Experience</div>
+      <div id="working" data-aos="fade-up"
+        data-aos-duration="1000">Working Experience</div>
       <ExpCard
         title="Mobile Application Developer"
         subtitle="Alicorn Tech Co. Ltd"
@@ -26,6 +33,8 @@
         period="1 January 2021 - Current"
         detail="High School, Sci-Math Program"
         image="user-interface.png"
+        data-aos="fade-left"
+        data-aos-duration="1000"
       /><ExpCard
         title="Mobile Application Developer"
         subtitle="Weserve Co. Ltd."
@@ -33,6 +42,8 @@
         period="Aug - Dec 2020"
         detail="High School, Sci-Math Program"
         image="user-interface.png"
+        data-aos="fade-left"
+        data-aos-duration="1000"
       />
       <ExpCard
         title="Internship Mobile Developer"
@@ -41,6 +52,8 @@
         period="May - July 2020"
         detail="High School, Sci-Math Program"
         image="internship.png"
+        data-aos="fade-left"
+        data-aos-duration="1000"
       />
     </div>
   </div>
@@ -48,6 +61,9 @@
 
 <script>
 import ExpCard from "../../components/ExpCard.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 export default {
   name: "ExperienceSection",
   components: {
@@ -88,17 +104,17 @@ export default {
     flex-direction: column;
   }
   #education {
-  padding: 1.25rem 0px;
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-#working {
-  padding: 1.25rem 0px;
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
+    padding: 1.25rem 0px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  #working {
+    padding: 1.25rem 0px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
 }
 
 #education-section {

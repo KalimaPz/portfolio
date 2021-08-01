@@ -1,14 +1,22 @@
 <template>
   <div class="portfolio-section">
-    <div class="topic">Portfolio</div>
+    <div class="topic" data-aos="fade-up" data-aos-duration="1000">
+      Portfolio
+    </div>
     <div>
-      <div id="participations">Participations</div>
+      <div id="participations" data-aos="fade-up" data-aos-duration="1000">
+        Participations
+      </div>
       <div id="participations-items-area">
         <PhotoCard
+          data-aos="fade-up"
+          data-aos-duration="1000"
           description="National Software Contest 2019"
           imageUrl="https://firebasestorage.googleapis.com/v0/b/bulma-project.appspot.com/o/IMG_0002.jpg?alt=media&token=b6fbda73-719a-4b12-9503-db976eceaeeb"
         />
         <PhotoCard
+          data-aos="fade-up"
+          data-aos-duration="1000"
           description="Thailand IT Contest 2020"
           imageUrl="https://firebasestorage.googleapis.com/v0/b/bulma-project.appspot.com/o/IMG_0005.jpg?alt=media&token=105e03bb-2f70-4265-b3ed-261418fa8fc2"
         />
@@ -16,10 +24,22 @@
           <PhotoCard/>
            -->
       </div>
-      <div class="topic">Projects</div>
+      <div class="topic" data-aos="fade-up" data-aos-duration="1000">
+        Projects
+      </div>
       <div id="project-section">
-        <ProjectImage image="noochuap.png" description="Noochuap Application" />
-        <ProjectImage image="noochuap.png" description="Servesook Smartfarm" />
+        <ProjectImage
+          image="noochuap.png"
+          description="Noochuap Application"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        />
+        <ProjectImage
+          image="servesook.png"
+          description="Servesook Smartfarm"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        />
 
         <!--  -->
       </div>
@@ -30,6 +50,9 @@
 <script>
 import PhotoCard from "../../components/PhotoCard.vue";
 import ProjectImage from "../../components/ProjectImage.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 export default {
   name: "PortfolioSection",
   components: { PhotoCard, ProjectImage },
@@ -45,7 +68,7 @@ export default {
 }
 #participations {
   text-align: center;
-padding: 1.25rem 0px;
+  padding: 1.25rem 0px;
   font-size: 1rem;
   font-weight: bold;
 }
