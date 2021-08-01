@@ -30,6 +30,9 @@
               <email-icon class="icon" />
               donnukrit@weserve.co.th
             </div>
+            <div>
+              <a-button id="download-cv" type="primary">Download CV</a-button>
+            </div>
           </div>
         </div>
       </div>
@@ -49,6 +52,9 @@ export default {
 </script>
 
 <style scoped>
+#download-cv {
+  margin: 1rem 0px;
+}
 @media only screen and (max-width: 768px) {
   #info-area {
     display: flex;
@@ -102,6 +108,8 @@ export default {
     max-height: 256px;
     width: 40vw;
     border-radius: 100%;
+    box-shadow: 1px 2px 10px rgba(87, 87, 87,0.9);
+    
   }
 
   #name {
@@ -146,6 +154,7 @@ export default {
     max-height: 256px;
     width: 50vw;
     border-radius: 100%;
+    box-shadow: 1px 2px 10px rgba(87, 87, 87,0.9);
   }
   .profile-image {
     flex: 2;
