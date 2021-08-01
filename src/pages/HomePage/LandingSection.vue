@@ -31,7 +31,9 @@
               donnukrit@weserve.co.th
             </div>
             <div>
-              <a-button id="download-cv" type="primary">Download CV</a-button>
+              <a-button id="download-cv" type="primary" href="/cv.pdf">Download CV</a-button>
+
+              <!-- <a href="/cv.pdf">resume</a> -->
             </div>
           </div>
         </div>
@@ -43,6 +45,7 @@
 <script>
 export default {
   name: "LandingSection",
+  methods: {},
   data: () => {
     return {
       avatarUrl: "https://avatars.githubusercontent.com/u/23716821?v=4",
@@ -108,8 +111,7 @@ export default {
     max-height: 256px;
     width: 40vw;
     border-radius: 100%;
-    box-shadow: 1px 2px 10px rgba(87, 87, 87,0.9);
-    
+    box-shadow: 1px 2px 10px rgba(87, 87, 87, 0.9);
   }
 
   #name {
@@ -154,7 +156,7 @@ export default {
     max-height: 256px;
     width: 50vw;
     border-radius: 100%;
-    box-shadow: 1px 2px 10px rgba(87, 87, 87,0.9);
+    box-shadow: 1px 2px 10px rgba(87, 87, 87, 0.9);
   }
   .profile-image {
     flex: 2;
