@@ -1,7 +1,7 @@
 <template>
   <div class="landing-page">
     <div>
-      <show-at breakpoint="medium">
+      <show-at breakpoint="mediumAndBelow">
         <a-menu
           style="display: flex; flex-direction: row; justify-content: flex-end"
           mode="horizontal"
