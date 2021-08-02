@@ -35,13 +35,15 @@
       </a-menu>
     </a-drawer>
     <div id="content-section">
-      <div class="my-info">
-        <div class="profile-image">
+      <div class="my-info" >
+        <div class="profile-image" data-aos="fade-up"
+        data-aos-duration="1500">
           <img :src="avatarUrl" id="avatar" />
         </div>
 
-        <div id="info-area">
-          <div id="name">Donnukrit Satirakul</div>
+        <div id="info-area" data-aos="fade-up"
+        data-aos-duration="1500">
+          <div id="name" >Donnukrit Satirakul</div>
           <div id="position">Front End / Mobile Developer</div>
 
           <div id="contact">
@@ -73,6 +75,9 @@
 
 <script>
 import { showAt } from "vue-breakpoints";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init()
 export default {
   name: "LandingSection",
   components: { showAt },
