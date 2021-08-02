@@ -1,12 +1,39 @@
 <template>
   <div class="landing-page">
-    <a-menu class="navigator" mode="horizontal" theme="dark">
-      <a-menu-item class="nav-item">About</a-menu-item>
-      <a-menu-item class="nav-item">Skills</a-menu-item>
-      <a-menu-item class="nav-item">Experiences</a-menu-item>
-      <a-menu-item class="nav-item">Portfolio</a-menu-item>
-    </a-menu>
-
+    <div>
+      <show-at breakpoint="medium">
+        <a-menu
+          style="display: flex; flex-direction: row; justify-content: flex-end"
+          mode="horizontal"
+          theme="light"
+        >
+          <a-menu-item class="nav-item"
+          @click="openDrawer"
+            ><img
+              style="width: 16px;"
+              src="../../assets/icons/hamburger-menu.svg"
+          /></a-menu-item>
+        </a-menu>
+      </show-at>
+      <show-at breakpoint="largeAndAbove">
+        <a-menu class="navigator" mode="horizontal" theme="light">
+          <a-menu-item class="nav-item">About</a-menu-item>
+          <a-menu-item class="nav-item">Skills</a-menu-item>
+          <a-menu-item class="nav-item">Experiences</a-menu-item>
+          <a-menu-item class="nav-item">Portfolio</a-menu-item>
+        </a-menu>
+      </show-at>
+    </div>
+    <a-drawer :visible="visible" @close="closeDrawer" :closable="false">
+      <a-menu
+        style="border-color: transparent; font-size: 1.5rem; font-weight: 600"
+      >
+        <a-menu-item>Home</a-menu-item>
+        <a-menu-item>Skills</a-menu-item>
+        <a-menu-item>Experiences</a-menu-item>
+        <a-menu-item>Portfolio</a-menu-item>
+      </a-menu>
+    </a-drawer>
     <div id="content-section">
       <div class="my-info">
         <div class="profile-image">
@@ -31,7 +58,9 @@
               donnukrit@weserve.co.th
             </div>
             <div>
-              <a-button id="download-cv" type="primary" href="/cv.pdf">Download CV</a-button>
+              <a-button id="download-cv" type="primary" href="/cv.pdf"
+                >Download CV</a-button
+              >
 
               <!-- <a href="/cv.pdf">resume</a> -->
             </div>
@@ -43,18 +72,31 @@
 </template>
 
 <script>
+import { showAt } from "vue-breakpoints";
 export default {
   name: "LandingSection",
-  methods: {},
+  components: { showAt },
   data: () => {
     return {
       avatarUrl: "https://avatars.githubusercontent.com/u/23716821?v=4",
+      visible: false,
     };
+  },
+  methods: {
+    openDrawer() {
+      this.visible = true;
+    },
+    closeDrawer() {
+      this.visible = false;
+    },
   },
 };
 </script>
 
 <style scoped>
+.drawer-item {
+  background-color: aqua;
+}
 #download-cv {
   margin: 1rem 0px;
 }
@@ -129,6 +171,7 @@ export default {
   .navigator {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
   .landing-page {
     height: 100vh;
@@ -191,5 +234,13 @@ export default {
 }
 .icon {
   margin-right: 10px;
+}
+
+.menu {
+  width: 24px;
+  margin: 1rem;
+}
+.menu:hover {
+  color: aquamarine;
 }
 </style>

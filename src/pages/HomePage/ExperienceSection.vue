@@ -8,7 +8,7 @@
         title="Prince of Songkhla University"
         subtitle2="Kathu Phuket, Thailand"
         period="2016 - 2020"
-        detail="Bachelor of Computer Engineering"
+        detail="Bachelor of Computer Engineering GPA 2.65"
         image="bachelors-degree.png"
         data-aos="fade-right"
         data-aos-duration="1000"
@@ -24,14 +24,14 @@
       />
     </div>
     <div id="working-section">
-      <div id="working" data-aos="fade-up"
-        data-aos-duration="1000">Working Experience</div>
+      <div id="working" data-aos="fade-up" data-aos-duration="1000">
+        Working Experience
+      </div>
       <ExpCard
         title="Mobile Application Developer"
         subtitle="Alicorn Tech Co. Ltd"
         subtitle2="Muang Phuket, Phuket, Thailand"
         period="1 January 2021 - Current"
-        detail="High School, Sci-Math Program"
         image="user-interface.png"
         data-aos="fade-left"
         data-aos-duration="1000"
@@ -40,7 +40,6 @@
         subtitle="Weserve Co. Ltd."
         subtitle2="Muang Phuket, Phuket, Thailand"
         period="Aug - Dec 2020"
-        detail="High School, Sci-Math Program"
         image="user-interface.png"
         data-aos="fade-left"
         data-aos-duration="1000"
@@ -50,7 +49,6 @@
         subtitle="Weserve Co. Ltd."
         subtitle2="Muang Phuket, Phuket, Thailand"
         period="May - July 2020"
-        detail="High School, Sci-Math Program"
         image="internship.png"
         data-aos="fade-left"
         data-aos-duration="1000"

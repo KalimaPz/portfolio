@@ -15,6 +15,7 @@
     "aos": "^2.3.4",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-breakpoints": "^1.1.0",
     "vue-material-design-icons": "^4.12.1",
     "vue-pdf": "^4.3.0"
   },

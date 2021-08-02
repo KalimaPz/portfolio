@@ -51,7 +51,12 @@ AOS.init();
 export default {
   name: "SkillSection",
   components: { SkillCard },
-  methods: {},
+  methods: {
+
+    async check() {
+      return "check";
+    }
+  },
   mounted() {
     let chart = am4core.create(
       this.$refs.chartdiv,
