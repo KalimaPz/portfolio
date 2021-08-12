@@ -1,39 +1,10 @@
 <template>
-  <div class="landing-page">
-    <div>
-      <show-at breakpoint="mediumAndBelow">
-        <a-menu
-          style="display: flex; flex-direction: row; justify-content: flex-end"
-          mode="horizontal"
-          theme="light"
-        >
-          <a-menu-item class="nav-item"
-          @click="openDrawer"
-            ><img
-              style="width: 16px;"
-              src="../../assets/icons/hamburger-menu.svg"
-          /></a-menu-item>
-        </a-menu>
-      </show-at>
-      <show-at breakpoint="largeAndAbove">
-        <a-menu class="navigator" mode="horizontal" theme="light">
-          <a-menu-item class="nav-item">About</a-menu-item>
-          <a-menu-item class="nav-item">Skills</a-menu-item>
-          <a-menu-item class="nav-item">Experiences</a-menu-item>
-          <a-menu-item class="nav-item">Portfolio</a-menu-item>
-        </a-menu>
-      </show-at>
-    </div>
-    <a-drawer :visible="visible" @close="closeDrawer" :closable="false">
-      <a-menu
-        style="border-color: transparent; font-size: 1.5rem; font-weight: 600"
-      >
-        <a-menu-item>Home</a-menu-item>
-        <a-menu-item>Skills</a-menu-item>
-        <a-menu-item>Experiences</a-menu-item>
-        <a-menu-item>Portfolio</a-menu-item>
-      </a-menu>
-    </a-drawer>
+
+<div>
+    <div style=""><img style="width:100%; position:absolute;" src="../../assets/Live-Background-1.svg"/></div>
+    <div class="landing-page">
+
+
     <div id="content-section">
       <div class="my-info" >
         <div class="profile-image" data-aos="fade-up"
@@ -71,34 +42,35 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
-import { showAt } from "vue-breakpoints";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init()
 export default {
   name: "LandingSection",
-  components: { showAt },
+  
   data: () => {
     return {
       avatarUrl: "https://avatars.githubusercontent.com/u/23716821?v=4",
-      visible: false,
+      
     };
   },
-  methods: {
-    openDrawer() {
-      this.visible = true;
-    },
-    closeDrawer() {
-      this.visible = false;
-    },
-  },
+
 };
 </script>
 
 <style scoped>
+
+.landing-page {
+    height: 100vh;
+   position: relative;
+ 
+  }
+
 .drawer-item {
   background-color: aqua;
 }
@@ -125,16 +97,8 @@ export default {
 
     /* background-color: aqua; */
   }
-  .landing-page {
-    height: 100vh;
-  }
-  .navigator {
-    display: flex;
-
-    flex-direction: column;
-    justify-content: center;
-  }
-
+  
+ 
   #content-section {
     display: flex;
     flex-direction: column;
@@ -178,9 +142,7 @@ export default {
     flex-direction: row;
     justify-content: center;
   }
-  .landing-page {
-    height: 100vh;
-  }
+ 
 
   #content-section {
     display: flex;

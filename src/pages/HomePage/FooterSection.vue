@@ -1,7 +1,7 @@
 <template>
   <div style="padding: 1rem; display: flex">
-    <div class="icon" v-for="n in link" :key="n">
-      <!-- <img class="icon" :src="n.icon" /> -->
+    <div>
+      
     </div>
   </div>
 </template>
