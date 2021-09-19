@@ -92,10 +92,7 @@ export default {
                 name: "React",
                 value: last_node_size,
               },
-              {
-                name: "React-Native",
-                value: last_node_size,
-              },
+
               {
                 name: "Vue",
                 value: last_node_size,
@@ -127,11 +124,15 @@ export default {
             value: sub_node_size,
             children: [
               {
-                name: "Node.js",
+                name: "Express",
                 value: last_node_size,
               },
               {
                 name: "Mongo",
+                value: last_node_size,
+              },
+               {
+                name: "FastApi",
                 value: last_node_size,
               },
             ],
@@ -154,6 +155,10 @@ export default {
                 name: "Kotlin",
                 value: last_node_size,
               },
+                            {
+                name: "GO",
+                value: last_node_size,
+              },
             ],
           },
           {
@@ -164,10 +169,7 @@ export default {
                 name: "C",
                 value: last_node_size,
               },
-              {
-                name: "TypeScript",
-                value: last_node_size,
-              },
+
             ],
           },
           {
@@ -188,6 +190,10 @@ export default {
               },
               {
                 name: "Git",
+                value: last_node_size,
+              },
+                            {
+                name: "JavaScript",
                 value: last_node_size,
               },
             ],
