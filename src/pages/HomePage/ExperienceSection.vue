@@ -27,11 +27,20 @@
       <div id="working" data-aos="fade-up" data-aos-duration="1000">
         Working Experience
       </div>
+        <ExpCard
+        title="Software Engineer"
+        subtitle="Digital Organic Co. Ltd"
+        subtitle2="Muang Phuket, Phuket, Thailand"
+        period="1 October 2021 - Current"
+        image="backend.png"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+      />
       <ExpCard
         title="Mobile Application Developer"
         subtitle="Alicorn Tech Co. Ltd"
         subtitle2="Muang Phuket, Phuket, Thailand"
-        period="1 January 2021 - Current"
+        period="1 January 2021 - 30 September 2021"
         image="user-interface.png"
         data-aos="fade-left"
         data-aos-duration="1000"

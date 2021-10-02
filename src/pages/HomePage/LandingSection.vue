@@ -15,7 +15,7 @@
         <div id="info-area" data-aos="fade-up"
         data-aos-duration="1500">
           <div id="name" >Donnukrit Satirakul</div>
-          <div id="position">Front End / Mobile Developer</div>
+          <div id="position">Software Engineer</div>
 
           <div id="contact">
             <div class="info-item">
@@ -28,7 +28,7 @@
             </div>
             <div class="info-item">
               <email-icon class="icon" />
-              donnukrit@weserve.co.th
+              donnukrit.s@digital.organic
             </div>
             <div>
               <a-button id="download-cv" type="primary" href="/cv.pdf"
