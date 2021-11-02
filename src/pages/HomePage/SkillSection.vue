@@ -148,7 +148,7 @@ export default {
             value: sub_node_size,
             children: [
               {
-                name: "Docker",
+                name: "Electron.js",
                 value: last_node_size,
               },
               {
@@ -167,6 +167,10 @@ export default {
             children: [
               {
                 name: "C",
+                value: last_node_size,
+              },
+                            {
+                name: "Docker",
                 value: last_node_size,
               },
 
